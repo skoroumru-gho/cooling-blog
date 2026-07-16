@@ -4,7 +4,7 @@ const urlsToCache = [
   '/cooling-blog/index.html',
   '/cooling-blog/recipes.html',
   '/cooling-blog/pasta.html',
-  '/cooling-blog/t_soup.html',
+  '/cooling-blog/t_sup.html',
   '/cooling-blog/tort.html',
   '/cooling-blog/salat.html',
   '/cooling-blog/pizza.html',
@@ -12,10 +12,10 @@ const urlsToCache = [
   '/cooling-blog/about.html',
   '/cooling-blog/feedback.html',
   '/cooling-blog/css/style.css',
-  '/cooling-blog/images/b_sup copy.jpg',
   '/cooling-blog/manifest.json',
   '/cooling-blog/icons/2026-07-16 14.52.16 copy.jpg',
   '/cooling-blog/icons/2026-07-16 14.52.16.jpg',
+  '/cooling-blog/images/b_sup copy.jpg',
   '/cooling-blog/images/b_sup.jpg',
   '/cooling-blog/images/pasta.jpeg',
   '/cooling-blog/images/pasta.png',
@@ -26,7 +26,7 @@ const urlsToCache = [
   '/cooling-blog/images/t_sup copy.jpg',
   '/cooling-blog/images/t_sup.jpg',
   '/cooling-blog/images/tort copy.jpg',
-  '/cooling-blog/images/tort.jpg',
+  '/cooling-blog/images/tort.jpg'
 ];
 
 self.addEventListener('install', event => {
