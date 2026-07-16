@@ -1,5 +1,4 @@
 const CACHE_NAME = 'cooking-blog-v1';
-
 const urlsToCache = [
   '/cooling-blog/',
   '/cooling-blog/index.html',
@@ -14,7 +13,7 @@ const urlsToCache = [
   '/cooling-blog/feedback.html',
   '/cooling-blog/css/style.css',
   '/cooling-blog/images/b_sup copy.jpg',
-  '/cooling-blog/manifest.json',   
+  '/cooling-blog/manifest.json',
   '/cooling-blog/icons/2026-07-16 14.52.16 copy.jpg',
   '/cooling-blog/icons/2026-07-16 14.52.16.jpg',
   '/cooling-blog/images/b_sup.jpg',
@@ -28,9 +27,7 @@ const urlsToCache = [
   '/cooling-blog/images/t_sup.jpg',
   '/cooling-blog/images/tort copy.jpg',
   '/cooling-blog/images/tort.jpg',
-
 ];
-
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -38,9 +35,6 @@ self.addEventListener('install', event => {
       .then(cache => {
         console.log('Кэш открыт');
         return cache.addAll(urlsToCache);
-      })
-      .catch(error => {
-        console.log('Ошибка кэширования:', error);
       })
   );
 });
@@ -50,12 +44,9 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         if (response) {
-          return response; 
+          return response;
         }
-        return fetch(event.request); 
-      })
-      .catch(() => {
-        return caches.match('/cooking_site_pwa/index.html');
+        return fetch(event.request);
       })
   );
 });
@@ -73,13 +64,14 @@ self.addEventListener('activate', event => {
       );
     })
   );
-  
-  self.addEventListener('push', event => {
+});
+
+self.addEventListener('push', event => {
   const data = event.data?.json() || {};
   event.waitUntil(
     self.registration.showNotification(data.title || 'Новое уведомление', {
       body: data.body || 'Откройте приложение',
-      icon: data.icon || '/icons/icon-192x192.png'
+      icon: data.icon || '/cooling-blog/icons/2026-07-16 14.52.16.jpg'
     })
   );
 });
@@ -87,8 +79,6 @@ self.addEventListener('activate', event => {
 self.addEventListener('notificationclick', event => {
   event.notification.close();
   event.waitUntil(
-    clients.openWindow(event.notification.data?.url || '/')
+    clients.openWindow('/cooling-blog/index.html')
   );
-});
-
 });
