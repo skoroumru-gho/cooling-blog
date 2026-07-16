@@ -2,7 +2,7 @@
   "name": "Кулинарный блог",
   "short_name": "Рецепты",
   "description": "Лучшие рецепты на каждый день",
-  "start_url": "/cooking_site_pwa/index.html",
+  "start_url": "/cooling-blog/index.html",
   "display": "standalone",
   "background_color": "#fdf6ec",
   "theme_color": "#d35400",
