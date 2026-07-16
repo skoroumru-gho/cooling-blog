@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все рецепты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> Кулинарный блог</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="feedback.php">Отзывы</a></li>
+                    <li><a href="todolist.html">Планировщик</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2> Все рецепты</h2>
+            <div class="cards-grid">
+                <div class="recipe-card">
+                    <img src="images/pasta.png" alt="Паста" class="recipe-img">
+                    <h3>Паста Карбонара</h3>
+                    <p>Ингредиенты: спагетти, бекон, яйца, пармезан.</p>
+                    <a href="pasta.html" class="btn">Подробнее</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/t_sup.jpg" alt="Суп" class="recipe-img">
+                    <h3>Тыквенный суп</h3>
+                    <p>Ингредиенты: тыква, сливки, имбирь.</p>
+                    <a href="t_sup.html" class="btn">Подробнее</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/tort.jpg" alt="Торт" class="recipe-img">
+                    <h3>Шоколадный торт</h3>
+                    <p>Ингредиенты: мука, шоколад, масло, яйца.</p>
+                    <a href="tort.html" class="btn">Подробнее</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/salat.jpg" alt="Салат" class="recipe-img">
+                    <h3>Салат Цезарь</h3>
+                    <p>Ингредиенты: курица, салат, сухарики, соус.</p>
+                    <a href="salat.html" class="btn">Подробнее</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/pizza.jpg" alt="Пицца" class="recipe-img">
+                    <h3>Пицца Маргарита</h3>
+                    <p>Ингредиенты: тесто, томаты, моцарелла, базилик.</p>
+                    <a href="pizza.html" class="btn">Подробнее</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/b_sup.jpg" alt="Борщ" class="recipe-img">
+                    <h3>Борщ</h3>
+                    <p>Ингредиенты: свекла, капуста, мясо, сметана.</p>
+                    <a href="b_sup.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Кулинарный блог. Все рецепты проверены.</p>
+        </div>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cooking_site_pwa/serviceworker.js')
+                .then(registration => {
+                    console.log('ServiceWorker зарегистрирован: ', registration);
+                })
+                .catch(error => {
+                    console.log('Ошибка регистрации ServiceWorker: ', error);
+                });
+        }
+    </script>
+</body>
+</html>

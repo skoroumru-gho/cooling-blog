@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Борщ - Рецепт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> Кулинарный блог</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="feedback.php">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2> Борщ</h2>
+            <img src="images/b_sup copy.jpg" alt="Борщ" style="width:100%; border-radius:12px; margin:20px 0;">
+            
+            <div style="display:flex; gap:40px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:250px;">
+                    <h3> Ингредиенты:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>🥩 Говядина на кости — 700 г</li>
+                        <li>🥬 Свекла — 2 шт.</li>
+                        <li>🥕 Морковь — 2 шт.</li>
+                        <li>🧅 Лук — 2 шт.</li>
+                        <li>🥔 Картофель — 6 шт.</li>
+                        <li>🥬 Капуста — 300 г</li>
+                        <li>🥫 Томатная паста — 3 ст.л.</li>
+                        <li>🧂 Соль, перец, лавровый лист — по вкусу</li>
+                    </ul>
+                </div>
+                <div style="flex:2; min-width:300px;">
+                    <h3> Пошаговое приготовление:</h3>
+                    <ol>
+                        <li>Залейте мясо холодной водой и варите на медленном огне 2 часа.</li>
+                        <li>Добавьте соль, перец и лавровый лист за 30 минут до готовности.</li>
+                        <li>Очистите и нарежьте картофель кубиками, добавьте в бульон.</li>
+                        <li>На сковороде обжарьте лук, морковь и свеклу с томатной пастой.</li>
+                        <li>Капусту нашинкуйте, добавьте в суп через 10 минут после картофеля.</li>
+                        <li>Добавьте зажарку и варите ещё 10 минут.</li>
+                        <li>Дайте настояться 30 минут и подавайте со сметаной и зеленью.</li>
+                    </ol>
+                </div>
+            </div>
+            <a href="recipes.html" class="btn" style="margin-top:30px; display:inline-block;">← Назад к рецептам</a>
+        </div>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cooking_site_pwa/serviceworker.js')
+                .then(registration => {
+                    console.log('ServiceWorker зарегистрирован: ', registration);
+                })
+                .catch(error => {
+                    console.log('Ошибка регистрации ServiceWorker: ', error);
+                });
+        }
+    </script>
+</body>
+</html>

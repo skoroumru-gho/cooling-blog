@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пицца Маргарита - Рецепт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> Кулинарный блог</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="feedback.php">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Пицца Маргарита</h2>
+            <img src="images/pizza copy.jpg" alt="Пицца Маргарита" style="width:100%; border-radius:12px; margin:20px 0;">
+            
+            <div style="display:flex; gap:40px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:250px;">
+                    <h3> Ингредиенты:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>🌾 Мука — 500 г</li>
+                        <li>💧 Вода тёплая — 300 мл</li>
+                        <li>🧂 Соль — 1 ч.л.</li>
+                        <li>🫒 Оливковое масло — 3 ст.л.</li>
+                        <li>🍅 Томатный соус — 200 г</li>
+                        <li>🧀 Моцарелла — 250 г</li>
+                        <li>🌿 Базилик свежий — 1 пучок</li>
+                        <li>🧄 Чеснок — 1 зубчик</li>
+                    </ul>
+                </div>
+                <div style="flex:2; min-width:300px;">
+                    <h3> Пошаговое приготовление:</h3>
+                    <ol>
+                        <li>Смешайте муку, соль, дрожжи и тёплую воду. Замесите мягкое тесто.</li>
+                        <li>Добавьте оливковое масло и месите ещё 5 минут.</li>
+                        <li>Накройте тесто и оставьте подходить на 1 час в тёплом месте.</li>
+                        <li>Раскатайте тесто в круглую лепёшку толщиной 0,5 см.</li>
+                        <li>Смажьте томатным соусом, сверху выложите нарезанную моцареллу.</li>
+                        <li>Выпекайте при 250°C 10–12 минут до золотистой корочки.</li>
+                        <li>Готовую пиццу посыпьте свежим базиликом и сбрызните оливковым маслом.</li>
+                    </ol>
+                </div>
+            </div>
+            <a href="recipes.html" class="btn" style="margin-top:30px; display:inline-block;">← Назад к рецептам</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Кулинарный блог. Все рецепты проверены.</p>
+        </div>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cooking_site_pwa/serviceworker.js')
+                .then(registration => {
+                    console.log('ServiceWorker зарегистрирован: ', registration);
+                })
+                .catch(error => {
+                    console.log('Ошибка регистрации ServiceWorker: ', error);
+                });
+        }
+    </script>
+</body>
+</html>

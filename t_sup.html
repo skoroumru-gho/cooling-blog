@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тыквенный суп - Рецепт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> Кулинарный блог</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="feedback.php">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2> Тыквенный суп-пюре</h2>
+            <img src="images/t_sup copy.jpg" alt="Тыквенный суп" style="width:100%; border-radius:12px; margin:20px 0;">
+            
+            <div style="display:flex; gap:40px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:250px;">
+                    <h3> Ингредиенты:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>🎃 Тыква — 1 кг</li>
+                        <li>🧅 Лук — 1 шт.</li>
+                        <li>🧄 Чеснок — 3 зубчика</li>
+                        <li>🥛 Сливки 20% — 200 мл</li>
+                        <li>🧂 Соль, перец — по вкусу</li>
+                        <li>🫒 Оливковое масло — 2 ст.л.</li>
+                        <li>🧈 Имбирь (свежий) — 2 см</li>
+                    </ul>
+                </div>
+                <div style="flex:2; min-width:300px;">
+                    <h3> Пошаговое приготовление:</h3>
+                    <ol>
+                        <li>Тыкву очистите от кожуры и нарежьте кубиками.</li>
+                        <li>Лук и чеснок мелко нарежьте, обжарьте на оливковом масле до золотистости.</li>
+                        <li>Добавьте тыкву, имбирь и обжаривайте ещё 5 минут.</li>
+                        <li>Залейте водой так, чтобы она слегка покрывала тыкву. Варите до мягкости.</li>
+                        <li>Измельчите блендером до состояния пюре, добавьте сливки.</li>
+                        <li>Подавайте с тыквенными семечками и сухариками.</li>
+                    </ol>
+                </div>
+            </div>
+            <a href="recipes.html" class="btn" style="margin-top:30px; display:inline-block;">← Назад к рецептам</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Кулинарный блог. Все рецепты проверены.</p>
+        </div>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cooking_site_pwa/serviceworker.js')
+                .then(registration => {
+                    console.log('ServiceWorker зарегистрирован: ', registration);
+                })
+                .catch(error => {
+                    console.log('Ошибка регистрации ServiceWorker: ', error);
+                });
+        }
+    </script>
+</body>
+</html>

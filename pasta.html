@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Паста Карбонара - Рецепт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> Кулинарный блог</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="feedback.php">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2> Паста Карбонара</h2>
+            <img src="images/pasta.jpeg" alt="Паста Карбонара" style="width:100%; border-radius:12px; margin:20px 0;">
+            
+            <div style="display:flex; gap:40px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:250px;">
+                    <h3> Ингредиенты:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>🍝 Спагетти — 400 г</li>
+                        <li>🥓 Бекон — 200 г</li>
+                        <li>🥚 Яйца — 4 шт.</li>
+                        <li>🧀 Пармезан — 100 г</li>
+                        <li>🧄 Чеснок — 2 зубчика</li>
+                        <li>🫒 Оливковое масло — 2 ст.л.</li>
+                        <li>🧂 Соль, перец — по вкусу</li>
+                    </ul>
+                </div>
+                <div style="flex:2; min-width:300px;">
+                    <h3> Пошаговое приготовление:</h3>
+                    <ol>
+                        <li>Отварите спагетти в подсоленной воде до состояния аль-денте.</li>
+                        <li>Нарежьте бекон мелкими кусочками и обжарьте на оливковом масле с чесноком до золотистого цвета.</li>
+                        <li>В отдельной миске взбейте яйца с тёртым пармезаном, солью и перцем.</li>
+                        <li>Слейте воду с пасты, добавьте её к бекону, перемешайте.</li>
+                        <li>Снимите с огня и добавьте яичную смесь, быстро перемешивая.</li>
+                        <li>Подавайте сразу, посыпав дополнительным пармезаном.</li>
+                    </ol>
+                </div>
+            </div>
+            <a href="recipes.html" class="btn" style="margin-top:30px; display:inline-block;">← Назад к рецептам</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Кулинарный блог. Все рецепты проверены.</p>
+        </div>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cooking_site_pwa/serviceworker.js')
+                .then(registration => {
+                    console.log('ServiceWorker зарегистрирован: ', registration);
+                })
+                .catch(error => {
+                    console.log('Ошибка регистрации ServiceWorker: ', error);
+                });
+        }
+    </script>
+</body>
+</html>

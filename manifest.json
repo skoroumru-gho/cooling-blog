@@ -1,0 +1,21 @@
+{
+  "name": "Кулинарный блог",
+  "short_name": "Рецепты",
+  "description": "Лучшие рецепты на каждый день",
+  "start_url": "/cooking_site_pwa/index.html",
+  "display": "standalone",
+  "background_color": "#fdf6ec",
+  "theme_color": "#d35400",
+  "icons": [
+    {
+      "src": "icons/2026-07-16 14.52.16.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "icons/2026-07-16 14.52.16 copy.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулинарный блог - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> Кулинарный блог</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="feedback.php">Отзывы</a></li>
+                    <li><a href="todolist.html">Планировщик</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Популярные рецепты</h2>
+            <div class="cards-grid">
+                <div class="recipe-card">
+                    <img src="images/pasta.png" alt="Паста" class="recipe-img">
+                    <h3>Паста Карбонара</h3>
+                    <p>Классическая итальянская паста с беконом, яйцом и пармезаном.</p>
+                    <a href="pasta.html" class="btn">Подробнее</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/t_sup.jpg" alt="Суп" class="recipe-img">
+                    <h3>Тыквенный суп-пюре</h3>
+                    <p>Нежный крем-суп с имбирём и сливками.</p>
+                    <a href="t_sup.html" class="btn">Подробнее</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/tort.jpg" alt="Торт" class="recipe-img">
+                    <h3>Шоколадный торт</h3>
+                    <p>Бисквит с кремом из белого шоколада.</p>
+                    <a href="tort.html" class="btn">Подробнее</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/salat.jpg" alt="Салат" class="recipe-img">
+                    <h3>Цезарь с курицей</h3>
+                    <p>Хрустящий салат с курицей и соусом.</p>
+                    <a href="salat.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Кулинарный блог. Все рецепты проверены.</p>
+        </div>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cooking_site_pwa/serviceworker.js')
+                .then(registration => {
+                    console.log('ServiceWorker зарегистрирован: ', registration);
+                })
+                .catch(error => {
+                    console.log('Ошибка регистрации ServiceWorker: ', error);
+                });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🍳 Кулинарный блог</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="feedback.html">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>💬 Отзывы</h2>
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); max-width: 600px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 48px; margin: 0;">📝</p>
+                <h3 style="color: #d35400;">Форма обратной связи</h3>
+                <p style="color: #666; margin: 20px 0;">В PWA-версии сайта форма обратной связи временно отключена.</p>
+                <p style="color: #999; font-size: 14px;">Для связи с нами напишите на email: <a href="mailto:info@cooking-blog.ru" style="color: #d35400;">info@cooking-blog.ru</a></p>
+                <p style="color: #999; font-size: 14px; margin-top: 10px;">Все отзывы можно оставить в веб-версии сайта.</p>
+            </div>
+
+            <!-- Заглушка: показываем примеры отзывов -->
+            <div style="margin-top: 40px;">
+                <h3 style="text-align: center; color: #333;">⭐ Отзывы наших читателей</h3>
+                <div class="reviews-container" style="max-width: 700px; margin: 0 auto;">
+                    <div class="review-item">
+                        <div>
+                            <span class="review-author">Анна</span>
+                            <span class="review-date">15.07.2026</span>
+                        </div>
+                        <p style="margin-top:8px;">Очень вкусные рецепты! Паста Карбонара стала моим любимым блюдом. Спасибо!</p>
+                    </div>
+                    <div class="review-item">
+                        <div>
+                            <span class="review-author">Михаил</span>
+                            <span class="review-date">14.07.2026</span>
+                        </div>
+                        <p style="margin-top:8px;">Борщ просто божественный! Готовлю по вашему рецепту уже второй раз. Всем рекомендую!</p>
+                    </div>
+                    <div class="review-item">
+                        <div>
+                            <span class="review-author">Елена</span>
+                            <span class="review-date">12.07.2026</span>
+                        </div>
+                        <p style="margin-top:8px;">Отличный сайт! Удобный интерфейс, красивые фото, понятные рецепты. Жду новых постов!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Кулинарный блог. Все рецепты проверены.</p>
+        </div>
+    </footer>
+
+    <!-- Регистрация service-worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cooking_site_pwa/serviceworker.js')
+                .then(registration => {
+                    console.log('ServiceWorker зарегистрирован: ', registration);
+                })
+                .catch(error => {
+                    console.log('Ошибка регистрации ServiceWorker: ', error);
+                });
+        }
+    </script>
+</body>
+</html>

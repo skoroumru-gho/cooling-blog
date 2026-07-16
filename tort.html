@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шоколадный торт - Рецепт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> Кулинарный блог</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recipes.html">Рецепты</a></li>
+                    <li><a href="feedback.php">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2> Шоколадный торт</h2>
+            <img src="images/tort copy.jpg" alt="Шоколадный торт" style="width:100%; border-radius:12px; margin:20px 0;">
+            
+            <div style="display:flex; gap:40px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:250px;">
+                    <h3> Ингредиенты:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>🍫 Чёрный шоколад — 200 г</li>
+                        <li>🧈 Сливочное масло — 150 г</li>
+                        <li>🍬 Сахар — 200 г</li>
+                        <li>🥚 Яйца — 4 шт.</li>
+                        <li>🌾 Мука — 150 г</li>
+                        <li>🥛 Сливки — 200 мл</li>
+                        <li>🍫 Какао-порошок — 2 ст.л.</li>
+                    </ul>
+                </div>
+                <div style="flex:2; min-width:300px;">
+                    <h3> Пошаговое приготовление:</h3>
+                    <ol>
+                        <li>Растопите шоколад с маслом на водяной бане.</li>
+                        <li>Взбейте яйца с сахаром до белой пены.</li>
+                        <li>Смешайте шоколадную массу с яичной, добавьте муку и какао.</li>
+                        <li>Выпекайте в форме при 180°C 30–35 минут.</li>
+                        <li>Для крема взбейте сливки с небольшим количеством сахара.</li>
+                        <li>Остывший корж разрежьте на 2 части, смажьте кремом.</li>
+                    </ol>
+                </div>
+            </div>
+            <a href="recipes.html" class="btn" style="margin-top:30px; display:inline-block;">← Назад к рецептам</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Кулинарный блог. Все рецепты проверены.</p>
+        </div>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/cooking_site_pwa/serviceworker.js')
+                .then(registration => {
+                    console.log('ServiceWorker зарегистрирован: ', registration);
+                })
+                .catch(error => {
+                    console.log('Ошибка регистрации ServiceWorker: ', error);
+                });
+        }
+    </script>
+</body>
+</html>
